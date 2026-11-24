@@ -1,0 +1,135 @@
+{
+  "created_utc": "2026-10-22T11:05:02Z",
+  "conditions": {
+    "GS": {
+      "renderer": "opengl",
+      "clock": "Stock",
+      "caps_khz": [
+        3532800,
+        4320000
+      ]
+    },
+    "GL": {
+      "renderer": "opengl",
+      "clock": "Large Underclock",
+      "caps_khz": [
+        1785600,
+        1958400
+      ]
+    },
+    "VS": {
+      "renderer": "vulkan",
+      "clock": "Stock",
+      "caps_khz": [
+        3532800,
+        4320000
+      ]
+    },
+    "VL": {
+      "renderer": "vulkan",
+      "clock": "Large Underclock",
+      "caps_khz": [
+        1785600,
+        1958400
+      ]
+    }
+  },
+  "blocks": [
+    [
+      "VS",
+      "VL",
+      "GL",
+      "GS"
+    ],
+    [
+      "VL",
+      "GS",
+      "VS",
+      "GL"
+    ],
+    [
+      "VL",
+      "GS",
+      "VS",
+      "GL"
+    ],
+    [
+      "GS",
+      "GL",
+      "VL",
+      "VS"
+    ],
+    [
+      "GL",
+      "VS",
+      "GS",
+      "VL"
+    ],
+    [
+      "VS",
+      "VL",
+      "GL",
+      "GS"
+    ],
+    [
+      "GS",
+      "GL",
+      "VL",
+      "VS"
+    ],
+    [
+      "GL",
+      "VS",
+      "GS",
+      "VL"
+    ]
+  ],
+  "record_seconds": 40,
+  "warmup_seconds": 8,
+  "analysis_window_seconds": [
+    3,
+    37
+  ],
+  "input_direction_hold_seconds": 0.45,
+  "resolution": 6,
+  "refresh_hz": 60,
+  "frameskip": "off",
+  "jit": true,
+  "threaded_rendering": true,
+  "save_state_slot": 7,
+  "motion_threshold_grayscale": 2.0,
+  "primary_metrics": [
+    "content_changes_per_wall_second",
+    "content_interval_over_25ms_percent"
+  ],
+  "noninferiority_margins": {
+    "content_changes_per_second_loss": 1.0,
+    "over_25ms_percent_increase": 1.0
+  },
+  "analysis": "Each trial is one sample. Paired differences within each complete block; 95% paired block-bootstrap CI, exact paired sign-flip test, Holm adjustment for four planned comparisons. No optional stopping. All long gaps retained; programmed direction changes included equally. Main comparison at fixed 60 Hz, 6x. Screen recording is an observer and may add load. Frequency caps checked before and throughout each run. Charging/power/thermal state logged; no battery-life extrapolation from plugged-in measurements.",
+  "planned_comparisons": [
+    [
+      "GL",
+      "GS"
+    ],
+    [
+      "VL",
+      "VS"
+    ],
+    [
+      "VS",
+      "GS"
+    ],
+    [
+      "VL",
+      "GL"
+    ]
+  ],
+  "recording_scope": "Middle 34 seconds of each 40-second clip; deterministic alternating horizontal input every 0.45 seconds, without programmed rests. Turning naturally affects picture cadence equally across conditions.",
+  "rom_sha1": "3ed14622bc12f9a8b03581b4fb33284434e00e3a",
+  "scene_sha1": "87a466293ab188f42ab954df404166875cd7a987",
+  "save_sha1": {
+    "en": "428798fad5b062c1eba96f4c8d54cd45ccb9b8f2",
+    "jp": "3be344d37aac7f7328ebf679a9180c4e66238dac"
+  }
+}

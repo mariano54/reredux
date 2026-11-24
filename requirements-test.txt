@@ -1,0 +1,3 @@
+-r requirements-build.txt
+numpy
+py-desmume==0.0.9

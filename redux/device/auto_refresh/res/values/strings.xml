@@ -1,0 +1,3 @@
+<resources>
+    <string name="service_description">Switch to 60 Hz while WatermelonDS is in front, then restore your previous refresh setting when you leave. Only the foreground app name is used. No screen text, screenshots, ROMs or saves are collected. No internet access.</string>
+</resources>

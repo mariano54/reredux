@@ -1,0 +1,1834 @@
+[
+ {
+  "stats": {
+   "overlay": 167,
+   "ram": "02199740",
+   "vanilla_ram": "021998C0",
+   "size": 268480,
+   "vanilla_size": 268096,
+   "front": 384,
+   "diff_bytes": 41,
+   "unverifiable": 202,
+   "functions_changed": 9
+  },
+  "changes": [
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 4,
+    "runs": [
+     [
+      "021A5A52",
+      4
+     ]
+    ],
+    "addr": "021A5918",
+    "placeholder": "FUN_021A5918",
+    "name": "ServerEvent_CalcDamage",
+    "mode": "thumb",
+    "size": 480,
+    "changes": [
+     {
+      "addr": "021A5A52",
+      "vanilla": "cmp r2, #17",
+      "redux": "cmp r2, #18"
+     },
+     {
+      "addr": "021A5A54",
+      "vanilla": "beq.n 0x21a5a68",
+      "redux": "bge.n 0x21a5a68"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 4,
+    "runs": [
+     [
+      "021AA966",
+      4
+     ]
+    ],
+    "addr": "021AA954",
+    "placeholder": "FUN_021AA954",
+    "name": null,
+    "mode": "thumb",
+    "size": 208,
+    "changes": [
+     {
+      "addr": "021AA966",
+      "vanilla": "cmp r0, #17",
+      "redux": "cmp r0, #18"
+     },
+     {
+      "addr": "021AA968",
+      "vanilla": "bne.n 0x21aa970",
+      "redux": "blt.n 0x21aa970"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 14,
+    "runs": [
+     [
+      "021BAFC4",
+      1
+     ],
+     [
+      "021BAFD6",
+      1
+     ],
+     [
+      "021BAFE2",
+      8
+     ],
+     [
+      "021BAFF4",
+      4
+     ]
+    ],
+    "addr": "021BAFA8",
+    "placeholder": "FUN_021BAFA8",
+    "name": "splitTypeCore",
+    "mode": "thumb",
+    "size": 84,
+    "changes": [
+     {
+      "addr": "021BAFC4",
+      "vanilla": "movs r1, #17",
+      "redux": "movs r1, #18"
+     },
+     {
+      "addr": "021BAFD6",
+      "vanilla": "movs r0, #17",
+      "redux": "movs r0, #18"
+     },
+     {
+      "addr": "021BAFE2",
+      "vanilla": "cmp r1, #17",
+      "redux": "cmp r1, #18"
+     },
+     {
+      "addr": "021BAFE4",
+      "vanilla": "bne.n 0x21baff4",
+      "redux": "blt.n 0x21baff4"
+     },
+     {
+      "addr": "021BAFE6",
+      "vanilla": "cmp r0, #17",
+      "redux": "cmp r0, #18"
+     },
+     {
+      "addr": "021BAFE8",
+      "vanilla": "bne.n 0x21bafee",
+      "redux": "blt.n 0x21bafee"
+     },
+     {
+      "addr": "021BAFF4",
+      "vanilla": "cmp r0, #17",
+      "redux": "cmp r0, #18"
+     },
+     {
+      "addr": "021BAFF6",
+      "vanilla": "bne.n 0x21baffa",
+      "redux": "blt.n 0x21baffa"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 4,
+    "runs": [
+     [
+      "021BB01A",
+      4
+     ]
+    ],
+    "addr": "021BB014",
+    "placeholder": "FUN_021BB014",
+    "name": "DoesMonHaveType",
+    "mode": "thumb",
+    "size": 48,
+    "changes": [
+     {
+      "addr": "021BB01A",
+      "vanilla": "cmp r4, #17",
+      "redux": "cmp r4, #18"
+     },
+     {
+      "addr": "021BB01C",
+      "vanilla": "beq.n 0x21bb03c",
+      "redux": "bge.n 0x21bb03c"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 19,
+    "runs": [
+     [
+      "021BD160",
+      16
+     ],
+     [
+      "021BD1AC",
+      3
+     ]
+    ],
+    "addr": "021BD160",
+    "placeholder": "FUN_021BD160",
+    "name": "GetTypeEffectiveness",
+    "mode": "thumb",
+    "size": 80,
+    "changes": [
+     {
+      "addr": "021BD160",
+      "vanilla": "cmp r0, #17",
+      "redux": "cmp r0, #18"
+     },
+     {
+      "addr": "021BD162",
+      "vanilla": "beq.n 0x21bd168",
+      "redux": "bge.n 0x21bd168"
+     },
+     {
+      "addr": "021BD164",
+      "vanilla": "cmp r1, #17",
+      "redux": "cmp r1, #18"
+     },
+     {
+      "addr": "021BD166",
+      "vanilla": "bne.n 0x21bd16c",
+      "redux": "blt.n 0x21bd16c"
+     },
+     {
+      "addr": "021BD16C",
+      "vanilla": "lsls r2, r0, #4",
+      "redux": "movs r2, #18"
+     },
+     {
+      "addr": "021BD16E",
+      "vanilla": "adds r2, r0, r2",
+      "redux": "muls r2, r0"
+     },
+     {
+      "addr": "021BD1AC",
+      "vanilla": "strb r0, [r0, #20]",
+      "redux": "str r7, [sp, #256] @ 0x100"
+     },
+     {
+      "addr": "021BD1AE",
+      "vanilla": "lsls r5, r3, #8",
+      "redux": "lsls r1, r3, #8"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 4,
+    "runs": [
+     [
+      "021BD2D8",
+      1
+     ],
+     [
+      "021BD2E4",
+      3
+     ]
+    ],
+    "addr": "021BD2B0",
+    "placeholder": "FUN_021BD2B0",
+    "name": "GetTypeWeaknesses",
+    "mode": "thumb",
+    "size": 56,
+    "changes": [
+     {
+      "addr": "021BD2D8",
+      "vanilla": "cmp r3, #17",
+      "redux": "cmp r3, #18"
+     },
+     {
+      "addr": "021BD2E4",
+      "vanilla": "strb r0, [r0, #20]",
+      "redux": "str r7, [sp, #256] @ 0x100"
+     },
+     {
+      "addr": "021BD2E6",
+      "vanilla": "lsls r5, r3, #8",
+      "redux": "lsls r1, r3, #8"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 4,
+    "runs": [
+     [
+      "021BF822",
+      4
+     ]
+    ],
+    "addr": "021BF7EC",
+    "placeholder": "FUN_021BF7EC",
+    "name": "HandlerColorChange",
+    "mode": "thumb",
+    "size": 124,
+    "changes": [
+     {
+      "addr": "021BF822",
+      "vanilla": "cmp r6, #17",
+      "redux": "cmp r6, #18"
+     },
+     {
+      "addr": "021BF824",
+      "vanilla": "beq.n 0x21bf864",
+      "redux": "bge.n 0x21bf864"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 1,
+    "runs": [
+     [
+      "021C7FB2",
+      1
+     ]
+    ],
+    "addr": "021C7FA0",
+    "placeholder": "FUN_021C7FA0",
+    "name": "HandlerTripleKickPower",
+    "mode": "thumb",
+    "size": 36,
+    "changes": [
+     {
+      "addr": "021C7FB2",
+      "vanilla": "movs r1, #10",
+      "redux": "movs r1, #20"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "function",
+    "bytes": 7,
+    "runs": [
+     [
+      "021C9E30",
+      7
+     ]
+    ],
+    "addr": "021C9E04",
+    "placeholder": "FUN_021C9E04",
+    "name": "HandlerConversion2",
+    "mode": "thumb",
+    "size": 176,
+    "changes": [
+     {
+      "addr": "021C9E30",
+      "vanilla": "cmp r4, #17",
+      "redux": "cmp r4, #18"
+     },
+     {
+      "addr": "021C9E32",
+      "vanilla": "beq.n 0x21c9eae",
+      "redux": "bge.n 0x21c9eae"
+     },
+     {
+      "addr": "021C9E36",
+      "vanilla": "movs r1, #17",
+      "redux": "movs r1, #18"
+     }
+    ]
+   },
+   {
+    "overlay": 167,
+    "kind": "data",
+    "bytes": 8,
+    "runs": [
+     [
+      "021DA2B4",
+      8
+     ]
+    ],
+    "hex": [
+     {
+      "addr": "021DA2B4",
+      "vanilla": "82010000ed851c02",
+      "redux": "0000000000000000"
+     }
+    ]
+   }
+  ],
+  "front": {
+   "ram": "02199740",
+   "size": 384,
+   "thumb": [
+    [
+     35231552,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231554,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231556,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231558,
+     "0004",
+     "movs r4, r0"
+    ],
+    [
+     35231560,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231562,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231564,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231566,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231568,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231570,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231572,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231574,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231576,
+     "0002",
+     "movs r2, r0"
+    ],
+    [
+     35231578,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231580,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231582,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231584,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231586,
+     "0208",
+     "lsls r0, r1, #8"
+    ],
+    [
+     35231588,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231590,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231592,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231594,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231596,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231598,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231600,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231602,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231604,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231606,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231608,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231610,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231612,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231614,
+     "0400",
+     "lsls r0, r0, #16"
+    ],
+    [
+     35231616,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231618,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231620,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231622,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231624,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231626,
+     "0800",
+     "lsrs r0, r0, #32"
+    ],
+    [
+     35231628,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231630,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231632,
+     "0808",
+     "lsrs r0, r1, #32"
+    ],
+    [
+     35231634,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231636,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231638,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231640,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231642,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231644,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231646,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231648,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231650,
+     "0802",
+     "lsrs r2, r0, #32"
+    ],
+    [
+     35231652,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231654,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231656,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231658,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231660,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231662,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231664,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231666,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231668,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231670,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231672,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231674,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231676,
+     "0208",
+     "lsls r0, r1, #8"
+    ],
+    [
+     35231678,
+     "0400",
+     "lsls r0, r0, #16"
+    ],
+    [
+     35231680,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231682,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231684,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231686,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231688,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231690,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231692,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231694,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231696,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231698,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231700,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231702,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231704,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231706,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231708,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231710,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231712,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231714,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231716,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231718,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231720,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231722,
+     "0208",
+     "lsls r0, r1, #8"
+    ],
+    [
+     35231724,
+     "0802",
+     "lsrs r2, r0, #32"
+    ],
+    [
+     35231726,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231728,
+     "0208",
+     "lsls r0, r1, #8"
+    ],
+    [
+     35231730,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231732,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231734,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231736,
+     "0808",
+     "lsrs r0, r1, #32"
+    ],
+    [
+     35231738,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231740,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231742,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231744,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231746,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231748,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231750,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231752,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231754,
+     "0808",
+     "lsrs r0, r1, #32"
+    ],
+    [
+     35231756,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231758,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231760,
+     "0208",
+     "lsls r0, r1, #8"
+    ],
+    [
+     35231762,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231764,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231766,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231768,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231770,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231772,
+     "0400",
+     "lsls r0, r0, #16"
+    ],
+    [
+     35231774,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231776,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231778,
+     "0208",
+     "lsls r0, r1, #8"
+    ],
+    [
+     35231780,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231782,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231784,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231786,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231788,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231790,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231792,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231794,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231796,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231798,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231800,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231802,
+     "0400",
+     "lsls r0, r0, #16"
+    ],
+    [
+     35231804,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231806,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231808,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231810,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231812,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231814,
+     "0802",
+     "lsrs r2, r0, #32"
+    ],
+    [
+     35231816,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231818,
+     "0802",
+     "lsrs r2, r0, #32"
+    ],
+    [
+     35231820,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231822,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231824,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231826,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231828,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231830,
+     "0402",
+     "lsls r2, r0, #16"
+    ],
+    [
+     35231832,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231834,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231836,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231838,
+     "0004",
+     "movs r4, r0"
+    ],
+    [
+     35231840,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231842,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231844,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231846,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231848,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231850,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231852,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231854,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231856,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231858,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231860,
+     "0204",
+     "lsls r4, r0, #8"
+    ],
+    [
+     35231862,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231864,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231866,
+     "0202",
+     "lsls r2, r0, #8"
+    ],
+    [
+     35231868,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231870,
+     "0404",
+     "lsls r4, r0, #16"
+    ],
+    [
+     35231872,
+     "0804",
+     "lsrs r4, r0, #32"
+    ],
+    [
+     35231874,
+     "0408",
+     "lsls r0, r1, #16"
+    ],
+    [
+     35231876,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231880,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231884,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231888,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231892,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231896,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231900,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231904,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231908,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231912,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231916,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231920,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231924,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231928,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ],
+    [
+     35231932,
+     "ffff ffff",
+     "@ <UNDEFINED> instruction: 0xffffffff"
+    ]
+   ],
+   "hex": "040404040402040002040404040404040404080402020408020008040404040208040802040804040402080402040408020404040404040404020202040200040408040404040408040400080408020408080402080404040404040208040204080402080404040408040404040202020404040202020408040804040802000404040404040804040404040804040204040404040408040402020204020408040408040404040402080408020208040408020404040404040808040404080202040404020404040402020808020402020802040404020404040408040004040404040802020404020404040804080404040402040404040204040004040408040804040402020208040402080404040404040404040402040404040404080400040204040404040804040404040804040202040804020404040402020404040404080804ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+  }
+ },
+ {
+  "stats": {
+   "overlay": 168,
+   "ram": "021DDA60",
+   "vanilla_ram": "021DDA60",
+   "size": 92128,
+   "vanilla_size": 92128,
+   "front": 0,
+   "diff_bytes": 2,
+   "unverifiable": 20,
+   "functions_changed": 0
+  },
+  "changes": [
+   {
+    "overlay": 168,
+    "kind": "data",
+    "bytes": 2,
+    "runs": [
+     [
+      "021F38A8",
+      2
+     ]
+    ],
+    "hex": [
+     {
+      "addr": "021F38A8",
+      "vanilla": "0000",
+      "redux": "3c02"
+     }
+    ]
+   }
+  ],
+  "front": null
+ },
+ {
+  "stats": {
+   "overlay": 36,
+   "ram": "0217F600",
+   "vanilla_ram": "0217F600",
+   "size": 352672,
+   "vanilla_size": 352672,
+   "front": 0,
+   "diff_bytes": 45,
+   "unverifiable": 0,
+   "functions_changed": 5
+  },
+  "changes": [
+   {
+    "overlay": 36,
+    "kind": "function",
+    "bytes": 4,
+    "runs": [
+     [
+      "02182506",
+      2
+     ],
+     [
+      "0218252A",
+      2
+     ]
+    ],
+    "addr": "021824E0",
+    "placeholder": "FUN_021824E0",
+    "name": "hollowSet",
+    "mode": "thumb",
+    "size": 96,
+    "changes": [
+     {
+      "addr": "02182506",
+      "vanilla": "bne.n 0x218253c",
+      "redux": "nop @ (mov r8, r8)"
+     },
+     {
+      "addr": "0218252A",
+      "vanilla": "bcs.n 0x2182536",
+      "redux": "nop @ (mov r8, r8)"
+     }
+    ]
+   },
+   {
+    "overlay": 36,
+    "kind": "function",
+    "bytes": 3,
+    "runs": [
+     [
+      "021A212A",
+      2
+     ],
+     [
+      "021A2145",
+      1
+     ]
+    ],
+    "addr": "021A206C",
+    "placeholder": "FUN_021A206C",
+    "name": "UpdatePhenomenon",
+    "mode": "thumb",
+    "size": 264,
+    "changes": [
+     {
+      "addr": "021A212A",
+      "vanilla": "beq.n 0x21a2168",
+      "redux": "nop @ (mov r8, r8)"
+     },
+     {
+      "addr": "021A2144",
+      "vanilla": "bcc.n 0x21a2150",
+      "redux": "b.n 0x21a2150"
+     }
+    ]
+   },
+   {
+    "overlay": 36,
+    "kind": "function",
+    "bytes": 5,
+    "runs": [
+     [
+      "021A2946",
+      3
+     ],
+     [
+      "021A2968",
+      2
+     ]
+    ],
+    "addr": "021A28E4",
+    "placeholder": "FUN_021A28E4",
+    "name": "EffectEncount_GenDustCloudItem",
+    "mode": "thumb",
+    "size": 136,
+    "changes": [
+     {
+      "addr": "021A2946",
+      "vanilla": "movs r0, #137 @ 0x89",
+      "redux": "movs r0, #72 @ 0x48"
+     },
+     {
+      "addr": "021A2948",
+      "vanilla": "lsls r0, r0, #2",
+      "redux": "movs r0, r0"
+     },
+     {
+      "addr": "021A2968",
+      "vanilla": "lsls r4, r4, #26",
+      "redux": "lsls r0, r2, #6"
+     }
+    ]
+   },
+   {
+    "overlay": 36,
+    "kind": "function",
+    "bytes": 37,
+    "runs": [
+     [
+      "021C61A0",
+      26
+     ],
+     [
+      "021C620C",
+      11
+     ]
+    ],
+    "addr": "021C618C",
+    "placeholder": "FUN_021C618C",
+    "name": "EventBattleCall_DecideEnvTrainer",
+    "mode": "thumb",
+    "size": 148,
+    "changes": [
+     {
+      "addr": "021C61A0",
+      "vanilla": "bl 0x20307c4",
+      "redux": "ldr r1, [pc, #112] @ (0x21c6214)"
+     },
+     {
+      "addr": "021C61A4",
+      "vanilla": "adds r7, r0, #0",
+      "redux": "ldrb r1, [r1, r2]"
+     },
+     {
+      "addr": "021C61A6",
+      "vanilla": "ldr r0, [sp, #4]",
+      "redux": "strb r1, [r4, #0]"
+     },
+     {
+      "addr": "021C61A8",
+      "vanilla": "bl 0x20307a0",
+      "redux": "bl 0x20307c4"
+     },
+     {
+      "addr": "021C61AC",
+      "vanilla": "cmp r7, #14",
+      "redux": "adds r7, r0, #0"
+     },
+     {
+      "addr": "021C61AE",
+      "vanilla": "bcs.n 0x21c61c2",
+      "redux": "ldr r0, [sp, #4]"
+     },
+     {
+      "addr": "021C61B0",
+      "vanilla": "ldr r1, [pc, #96] @ (0x21c6214)",
+      "redux": "bl 0x20307a0"
+     },
+     {
+      "addr": "021C61B4",
+      "vanilla": "ldrh r1, [r1, r2]",
+      "redux": "cmp r7, #14"
+     },
+     {
+      "addr": "021C61B6",
+      "vanilla": "add sp, #12",
+      "redux": "bcs.n 0x21c61c2"
+     },
+     {
+      "addr": "021C61B8",
+      "vanilla": "strh r1, [r4, #0]",
+      "redux": "add sp, #12"
+     },
+     {
+      "addr": "021C620C",
+      "vanilla": "strh r0, [r4, #0]",
+      "redux": "ldr r0, [pc, #16] @ (0x21c6220)"
+     },
+     {
+      "addr": "021C6214",
+      "vanilla": "cmp r0, #228 @ 0xe4",
+      "redux": "movs r3, #149 @ 0x95"
+     },
+     {
+      "addr": "021C6216",
+      "vanilla": "lsls r5, r3, #8",
+      "redux": "lsls r1, r1, #8"
+     }
+    ]
+   },
+   {
+    "overlay": 36,
+    "kind": "function",
+    "bytes": 10,
+    "runs": [
+     [
+      "021C8C60",
+      10
+     ]
+    ],
+    "addr": "021C8C34",
+    "placeholder": "FUN_021C8C34",
+    "name": "generateHollow",
+    "mode": "thumb",
+    "size": 156,
+    "changes": [
+     {
+      "addr": "021C8C60",
+      "vanilla": "movs r0, #100 @ 0x64",
+      "redux": "movs r0, #3"
+     },
+     {
+      "addr": "021C8C66",
+      "vanilla": "adds r0, r0, #1",
+      "redux": "adds r4, r0, #0"
+     },
+     {
+      "addr": "021C8C68",
+      "vanilla": "lsls r0, r0, #24",
+      "redux": "b.n 0x21c8c92"
+     }
+    ]
+   },
+   {
+    "overlay": 36,
+    "kind": "data",
+    "bytes": 1,
+    "runs": [
+     [
+      "021D02EE",
+      1
+     ]
+    ],
+    "hex": [
+     {
+      "addr": "021D02EE",
+      "vanilla": "6e",
+      "redux": "ee"
+     }
+    ]
+   }
+  ],
+  "front": null
+ },
+ {
+  "stats": {
+   "overlay": 166,
+   "ram": "0219CE80",
+   "vanilla_ram": "0219CE80",
+   "size": 2144,
+   "vanilla_size": 2144,
+   "front": 0,
+   "diff_bytes": 6,
+   "unverifiable": 0,
+   "functions_changed": 0
+  },
+  "changes": [
+   {
+    "overlay": 166,
+    "kind": "data",
+    "bytes": 6,
+    "runs": [
+     [
+      "0219D668",
+      1
+     ],
+     [
+      "0219D676",
+      1
+     ],
+     [
+      "0219D690",
+      4
+     ]
+    ],
+    "hex": [
+     {
+      "addr": "0219D668",
+      "vanilla": "dd",
+      "redux": "35"
+     },
+     {
+      "addr": "0219D676",
+      "vanilla": "ea",
+      "redux": "e7"
+     },
+     {
+      "addr": "0219D690",
+      "vanilla": "50005100",
+      "redux": "20011701"
+     }
+    ]
+   }
+  ],
+  "front": null
+ },
+ {
+  "stats": {
+   "overlay": 255,
+   "ram": "021BB700",
+   "vanilla_ram": "021BB700",
+   "size": 122848,
+   "vanilla_size": 122848,
+   "front": 0,
+   "diff_bytes": 12,
+   "unverifiable": 0,
+   "functions_changed": 6
+  },
+  "changes": [
+   {
+    "overlay": 255,
+    "kind": "function",
+    "bytes": 1,
+    "runs": [
+     [
+      "021BF2C0",
+      1
+     ]
+    ],
+    "addr": "021BF288",
+    "placeholder": "FUN_021BF288",
+    "name": null,
+    "mode": "thumb",
+    "size": 124,
+    "changes": [
+     {
+      "addr": "021BF2C0",
+      "vanilla": "cmp r4, #49 @ 0x31",
+      "redux": "cmp r4, #50 @ 0x32"
+     }
+    ]
+   },
+   {
+    "overlay": 255,
+    "kind": "function",
+    "bytes": 2,
+    "runs": [
+     [
+      "021C2A10",
+      2
+     ]
+    ],
+    "addr": "021C2908",
+    "placeholder": "FUN_021C2908",
+    "name": null,
+    "mode": "thumb",
+    "size": 272,
+    "changes": [
+     {
+      "addr": "021C2A10",
+      "vanilla": "add r5, pc, #752 @ (adr r5, 0x21c2d04)",
+      "redux": "add r7, pc, #0 @ (adr r7, 0x21c2a14)"
+     }
+    ]
+   },
+   {
+    "overlay": 255,
+    "kind": "function",
+    "bytes": 4,
+    "runs": [
+     [
+      "021CF534",
+      4
+     ]
+    ],
+    "addr": "021CF51C",
+    "placeholder": "FUN_021CF51C",
+    "name": null,
+    "mode": "thumb",
+    "size": 84,
+    "changes": [
+     {
+      "addr": "021CF534",
+      "vanilla": "ldr r1, [pc, #44] @ (0x21cf564)",
+      "redux": "bl 0x2093bf0"
+     }
+    ]
+   },
+   {
+    "overlay": 255,
+    "kind": "function",
+    "bytes": 3,
+    "runs": [
+     [
+      "021D0806",
+      1
+     ],
+     [
+      "021D096C",
+      2
+     ]
+    ],
+    "addr": "021D07D0",
+    "placeholder": "FUN_021D07D0",
+    "name": null,
+    "mode": "thumb",
+    "size": 424,
+    "changes": [
+     {
+      "addr": "021D0806",
+      "vanilla": "cmp r4, #17",
+      "redux": "cmp r4, #18"
+     },
+     {
+      "addr": "021D096C",
+      "vanilla": "add r2, pc, #416 @ (adr r2, 0x21d0b10)",
+      "redux": "add r5, pc, #752 @ (adr r5, 0x21d0c60)"
+     }
+    ]
+   },
+   {
+    "overlay": 255,
+    "kind": "function",
+    "bytes": 1,
+    "runs": [
+     [
+      "021D09CA",
+      1
+     ]
+    ],
+    "addr": "021D0978",
+    "placeholder": "FUN_021D0978",
+    "name": null,
+    "mode": "thumb",
+    "size": 100,
+    "changes": [
+     {
+      "addr": "021D09CA",
+      "vanilla": "cmp r4, #17",
+      "redux": "cmp r4, #18"
+     }
+    ]
+   },
+   {
+    "overlay": 255,
+    "kind": "function",
+    "bytes": 1,
+    "runs": [
+     [
+      "021D0A3E",
+      1
+     ]
+    ],
+    "addr": "021D0A28",
+    "placeholder": "FUN_021D0A28",
+    "name": null,
+    "mode": "thumb",
+    "size": 48,
+    "changes": [
+     {
+      "addr": "021D0A3E",
+      "vanilla": "cmp r4, #49 @ 0x31",
+      "redux": "cmp r4, #50 @ 0x32"
+     }
+    ]
+   }
+  ],
+  "front": null
+ },
+ {
+  "stats": {
+   "overlay": 265,
+   "ram": "021998C0",
+   "vanilla_ram": "021998C0",
+   "size": 8736,
+   "vanilla_size": 8736,
+   "front": 0,
+   "diff_bytes": 20,
+   "unverifiable": 0,
+   "functions_changed": 1
+  },
+  "changes": [
+   {
+    "overlay": 265,
+    "kind": "function",
+    "bytes": 1,
+    "runs": [
+     [
+      "02199F74",
+      1
+     ]
+    ],
+    "addr": "02199F3C",
+    "placeholder": "FUN_02199F3C",
+    "name": null,
+    "mode": "thumb",
+    "size": 60,
+    "changes": [
+     {
+      "addr": "02199F74",
+      "vanilla": "@ <UNDEFINED> instruction: 0xb8cc",
+      "redux": "@ <UNDEFINED> instruction: 0xb8c8"
+     }
+    ]
+   },
+   {
+    "overlay": 265,
+    "kind": "data",
+    "bytes": 70,
+    "runs": [
+     [
+      "0219B8C8",
+      69
+     ],
+     [
+      "0219BA9C",
+      1
+     ]
+    ],
+    "hex": [
+     {
+      "addr": "0219B8C8",
+      "vanilla": "000000002d00000026000000280000002e0000002b0000003000000022000000290000003100000027000000320000002a000000250000002f0000002c0000002400000023",
+      "redux": "2d00000026000000280000002e0000002b0000003000000022000000290000003100000027000000320000002a000000250000002f0000002c00000024000000230000002d"
+     },
+     {
+      "addr": "0219BA9C",
+      "vanilla": "09",
+      "redux": "04"
+     }
+    ]
+   }
+  ],
+  "front": null
+ }
+]

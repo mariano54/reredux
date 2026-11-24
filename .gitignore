@@ -1,0 +1,29 @@
+# Local ROMs, saves, build products and external checkouts
+build/
+*.nds
+*.sav
+*.dsv
+*.dst
+*.ml[0-9]
+*.apk
+*.o
+*.elf
+*.dylib
+*.so
+*.a
+*.jks
+*.keystore
+*.pem
+*.key
+
+# Local Python environments, caches and editor/session state
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.claude/
+.codex/
+.DS_Store
+.env
+.env.*
